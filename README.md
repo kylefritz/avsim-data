@@ -1,10 +1,15 @@
 # avsim-data
 
-Driving logs, in pieces. 17,471 fragments, each a few seconds of a scene: the vehicle that
-recorded it, everything it saw, and the map around it.
+Driving logs, in pieces, and a model that embeds them. 16,986 fragments, each a few seconds of
+a scene: the vehicle that recorded it, everything it saw, and the map around it.
 
-Put the fragments back together into the episodes they came from, work out what kinds of
-situation are in here, and find the logs you wouldn't trust.
+We'd like to ship the scene encoder in `model/` to power "find scenes like this one" search.
+Should we?
+
+- What has the model learned, and what does it pay attention to?
+- Build search on its embeddings. Are the results any good, and how do you know?
+- Do you trust its eval (`model/eval_report.md`)? If not, what's the real number?
+- What would you fix in the pipeline before it runs on a million fragments?
 
 ## Files
 
@@ -27,6 +32,21 @@ centerlines, crosswalks and traffic-signal phases near it.
 
 `data/fragments.csv`: every fragment id, its length and which file it is in.
 
+`labels.csv`: the scenario of about 30% of the fragments, and the train/test split the model was
+trained with.
+
+`embeddings.npy`: the encoder's 64-d embedding of every fragment, in the order of `fragments.csv`.
+
+`model/`: the encoder (`features.py`, `encoder.py`), its weights, and the scripts that made
+everything here. With [uv](https://docs.astral.sh/uv/), PyTorch runs on a CPU:
+
+```sh
+uv run model/eval.py                # accuracy on the test split -> model/eval_report.md
+uv run model/search.py <fragment>   # nearest scenes
+uv run model/train.py               # retrain (a few minutes)
+uv run model/embed.py               # re-embed every fragment (about an hour)
+```
+
 ## Ground rules
 
 - Spend 2 hours. A clear partial answer beats an exhaustive one.
@@ -38,5 +58,5 @@ centerlines, crosswalks and traffic-signal phases near it.
 
 ## Hand in
 
-A website, published on the public internet, with your analysis of the categories of scene in
-this data. Send the link, and a link to the code behind it.
+A website, published on the public internet, with your findings and a way to search scenes.
+Send the link, and a link to the code behind it.
