@@ -27,6 +27,14 @@ centerlines, crosswalks and traffic-signal phases near it.
 
 `data/fragments.csv`: every fragment id, its length and which file it is in.
 
+## Ground rules
+
+- Plan on about 4 hours, and stop at 6. A clear partial answer beats an exhaustive one.
+- Use any tools you like, AI agents included. Keep your prompts or agent transcripts and link them
+  from your repo: we'll talk about how you directed the work.
+- Hand in within a week. Then we'll set up a 30-minute call where you walk us through the site.
+- The data is synthetic, generated for this exercise.
+
 ## Hand in
 
 A website, published on the public internet, with your analysis of the categories of scene in
