@@ -29,9 +29,10 @@ centerlines, crosswalks and traffic-signal phases near it.
 
 ## Ground rules
 
-- Plan on about 4 hours, and stop at 6. A clear partial answer beats an exhaustive one.
-- Use any tools you like, AI agents included. Keep your prompts or agent transcripts and link them
-  from your repo: we'll talk about how you directed the work.
+- Spend 2 hours. A clear partial answer beats an exhaustive one.
+- Use any tools you like, AI agents included. We'll talk about how you directed the work, so
+  keep a record: `AGENTS.md` (and `CLAUDE.md`, the same file) asks your agent to log your requests
+  to `PROMPTS.md`. Keep that, or link exported transcripts instead.
 - Hand in within a week. Then we'll set up a 30-minute call where you walk us through the site.
 - The data is synthetic, generated for this exercise.
 
