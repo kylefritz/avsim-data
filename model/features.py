@@ -96,7 +96,7 @@ def _pose(x, y, yaw):
 
 
 def fragment_features(rows, m):
-    """rows: the observation rows of one fragment. m: its map crop (or None)."""
+    """rows: the observation rows of one fragment. m: its map crop."""
     objs = np.zeros((N_OBJ, OBJ_DIM), np.float32)
     mask = np.zeros(N_OBJ, bool)
     ego_tok = np.zeros(OBJ_DIM, np.float32)
