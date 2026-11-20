@@ -3,8 +3,8 @@
 Driving logs, in pieces. 17,471 fragments, each a few seconds of a scene: the vehicle that
 recorded it, everything it saw, and the map around it.
 
-Put the fragments back together into the episodes they came from, work out what kinds of
-situation are in here, and find the logs you wouldn't trust.
+Put the fragments back together into the episodes they came from, and work out what
+kinds of situation are in here.
 
 ## Files
 
