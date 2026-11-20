@@ -29,6 +29,7 @@ centerlines, crosswalks and traffic-signal phases near it.
 
 ## Ground rules
 
+- Fork this repo and do your work in your fork. Don't push to this one.
 - Spend 2 hours. A clear partial answer beats an exhaustive one.
 - Use any tools you like, AI agents included. We'll talk about how you directed the work, so
   keep a record: `AGENTS.md` (and `CLAUDE.md`, the same file) asks your agent to log your requests
